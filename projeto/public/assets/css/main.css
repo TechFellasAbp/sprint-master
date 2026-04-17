@@ -61,9 +61,48 @@ html, body{
     width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1rem;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 30px;
     box-shadow: 0 7px 14px #2e004899;
+    align-items: center;
+}
+
+.form-container h1{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.form-container h5{
+    margin: 0;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.form-input{
+    width: 80%;
+}
+
+.form-extras {
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.form-extras a{
+    color: #F9B420;
+    display: flex;
+}
+
+.form-extras input{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.form-extras div{
+    display: inline-flex;
 }
