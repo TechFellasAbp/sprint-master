@@ -65,7 +65,7 @@ html, body{
     background-color: #fff;
     border-radius: 40px;
     padding: 30px;
-    box-shadow: 0 7px 14px #2e004899;
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.150) ;
     align-items: center;
 }
 
@@ -81,15 +81,27 @@ html, body{
     font-size: 1.25rem;
 }
 .form-input{
-    width: 80%;
+    width: 90%;
+    border-radius: 25px;
+    padding: 10px;
+    border:#cccccc solid 2px;
+}
+
+.button-next {
+    width: 90%;
+    background-color: #F9B420;
+    border-radius: 25px;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
 }
 
 .form-extras {
     display: flex;
     font-size: 0.9rem;
     align-items: center;
-    width: 80%;
-    justify-content: space-between;
+    width: 90%;
+    justify-content: center;
 }
 
 .form-extras a{
@@ -105,4 +117,8 @@ html, body{
 
 .form-extras div{
     display: inline-flex;
+}
+.style-paragrafo {
+    display: flex;
+    gap: 5px;
 }
