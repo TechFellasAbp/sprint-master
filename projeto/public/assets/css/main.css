@@ -1,3 +1,6 @@
+/*Importando a fonte Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{ 
     box-sizing: border-box;
 }
@@ -5,3 +8,94 @@
 html, body{
     margin: 0;
 }
+
+/*ESTILIZAÇÃO DA HOME*/
+/*Estilização do menu*/
+header {
+    width: 100%;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    justify-content: space-between;
+    background-color:  #113b70;
+    height: 4.75rem;
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+}
+
+.logo{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 0.3125rem;
+}
+
+.texto-menu.logo-texto{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.user{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.scrum-master-logo{
+    height: 3.75rem;
+}
+
+.foto-de-perfil{
+    height: 3.125rem;
+}
+
+.user-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto-menu{
+    margin: 0;
+    color: #ffff;
+    font-family: Roboto;
+}
+
+.texto-menu.email{
+    margin: 0;
+    color: #ffff;
+    font-family: Roboto;
+    font-size: small;
+}
+
+.texto-menu.nome-usuário{
+    margin: 0;
+    color: #ffff;
+    font-family: Roboto;
+    font-size: large;
+    font-weight: 600;
+}
+/*Fim da estilização do menu*/
+/*Começo da estilização do banner com botão "começar avaliação"*/
+
+.banner-container{
+    display: flex;
+    height: 100%;
+    background-image: url(../img/banner-top.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+}
+.banner-top{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+
+}
+/*Fim da estilização do banner com botão "começar avaliação"*/
+/*FIM DA ESTILIZAÇÃO DA HOME*/
