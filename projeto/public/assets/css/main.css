@@ -5,13 +5,16 @@
 }
 
 html, body{
+    background-color: #FFF8EF;
     margin: 0;
     font-family: Roboto, sans-serif;
     min-height: 100vh;
+    height: 100%;
 }
 
 .questionnaire{
     height: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +32,24 @@ html, body{
 .questionnaire .header{
     width: 100%;
     height: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: #09264A;
+}
+
+.questionnaire .header img{
+    float: right;
+}
+
+.questionnaire .header a{
+    background-color: white;
+    color: #09264A;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
 }
 
 .questionnaire-title{
@@ -39,13 +59,60 @@ html, body{
     gap: 0.8rem;
 }
 
+.questionnaire h3{
+    margin-top: 0;
+}
+
 .questionnaire-box{
-    background-color: yellow;
+    background-color: #FFFFFF;
+    box-shadow: 0rem 0.14rem 0.2rem 0.1rem #60584448;
     width: 70%;
     padding: 2rem;
-    border-radius: 0.75rem;
+    border-radius: 1.5rem;
+}
+
+.questionnaire-box .button-holder{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position:relative;
+    float: right;
+}
+
+.questionnaire-box .button{
+    background-color: #F9B420;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    min-width: 6rem;
+    box-shadow: 0rem 0.1rem 0.4rem 0.2rem #60584428;;
+}
+
+.questionnaire-box .button:hover{
+    background-color: #d1881b;
+}
+
+.questionnaire-box .question-indicator{
+    position: relative;
+    margin-bottom: 0;
+    margin-top: auto;
+    bottom: 0;
+    height: 0.2rem;
+    width: 3rem;
+    background-color: #F9B420;
+}
+
+.questionnaire .options-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
 }
 
 .questionnaire .footer{
     margin-top: auto;
+    color: #ADA498;
+    height: 3rem;
+    width: 100%;
+    background-color: #09264A;
 }
