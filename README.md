@@ -1,52 +1,51 @@
-# Sprint Master - ABP I
-[ logo do projeto aqui ]
-
-Aplicação Web desenvolvida para ensinar metodologias ágeis
-
-<br>
+# <img width="200" height="200" alt="sprint-master-logo" src="https://github.com/user-attachments/assets/b285bf24-ae11-4279-830a-d5c1bcd4bd6b" /> Sprint Master - ABP I
 
 ## 📚 Sumário
-[Sobre o Projeto](#-sobre-o-projeto) | [Requisitos](#-requisitos) | [Product Backlog](#-product-backlog) | [Sprints](#-sprints)  | [Tecnologias](#%EF%B8%8F-tecnologias) | [Nossa Equipe](#%E2%80%8D-nossa-equipe)
+[Sobre o Projeto](#-sobre-o-projeto) | [Product Backlog](#-product-backlog) | [Cronograma ](#-product-backlog) | [Documentação](#-requisitos) |  [Sprints](#-sprints)  | [Tecnologias](#%EF%B8%8F-tecnologias) | [Equipe](#%E2%80%8D-nossa-equipe)
+
 
 <br>
 
 ## 📌 Sobre o Projeto
-  **Sprint Master** é uma plataforma web desenvolvida pela equipe **TechFellas** com a missão de facilitar o aprendizado de metodologias ágeis. O portal combina teoria e prática, oferecendo artigos, materiais complementares e atividades interativas. Ao concluir os quizzes com sucesso, o estudante é recompensado com um certificado de conclusão.
+<p  style="text-align: justify;">
+  <b>Sprint Master</b> é uma plataforma web desenvolvida pela equipe <b>TechFellas</b> com a missão de facilitar o aprendizado de metodologias ágeis. O portal oferece atividades interativas para testar e certficar seu conhecimento. Ao concluir os quizzes com sucesso, o estudante é recompensado com um certificado de conclusão.
+  </p>
 
 <br>
 
-## 📋 Requisitos 
-
-### [Requisitos Funcionais (RF)](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos-funcionais.md)
-Os Requisitos funcionais são especificações detalhadas que definem o que um sistema deve fazer, descrevendo funcionalidades e comportamentos.
-<br>
-Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos-funcionais.md">aqui</a>.
-
-
-### [Requisitos Não Funcionais (RNF)](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos-nao-funcionais.md)
-Os Requisitos não funcionais definem como um sistema opera. Eles estabelecem critérios de qualidade, restrições e atributos como desempenho, segurança, usabilidade e confiabilidade.
-<br>
-Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos-nao-funcionais.md">aqui</a>.
-
-
-### [Restrição do Projeto (RP)](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/restricoes.md)
-Restrições de um projeto são limitações, fatores externos ou imposições que condicionam o planejamento, execução e conclusão, definindo o que pode ser realista entregue.
-<br>
-Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/restricoes.md">aqui</a>.
+## 🧱 Estrutura do projeto
+```
+├ docs/        # Documentação do projeto
+├ projeto/
+│ ├ public/    # Arquivos estáticos (site)
+│   └ assets/  # CSS e JS 
+│ └ src/       # Código e organização interna
+└ README.md
+```
 
 <br>
 
-## 📄 Product Backlog
+## [📄 Product Backlog](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/backlog/product-backlog.md)
+<p style="text-align: justify;">
+O Product Backlog é uma lista dinâmica, ordenada e única de tudo o que é necessário para aprimorar um produto, incluindo funcionalidades, melhorias e correções de bugs.<br>
+Ele pode ser encontrado <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/backlog/product-backlog.md">aqui</a>.
+</p>
+
+<br>
+
+## 📈 Cronograma de Evolução do projeto
+--
 
 <br>
   
 ## 🎯 Sprints
 
-| Sprints | Data | Stauts | Relatório | Burn-Down | Vídeo | 
-| --------| ---- | ------ | --------- | --------- | ----- |
-| 1 | 13/04/2026 | ⬜ | [Ver relatório](#-sprint-backlog) | [Ver Burn-Down](#-burn-down) | Ver vídeo |
-| 2 | 04/05/2026 | ⬜ | [Ver relatório](#-sprint-backlog-1) | [Ver Burn-Down](#-burn-down-1) | Ver vídeo |
-| 3 | 25/05/2026 | ⬜ | [Ver relatório](#-sprint-backlog-2) | [Ver Burn-Down](#-burn-down-2) | Ver vídeo |
+| Sprints | Data | Stauts | Relatório | Vídeo | 
+| --------| ---- | ------ | --------- | ----- |
+| 1 | 13/04/2026 |  ⌛ | [Ver relatório](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/relatorios/relatorio-sprint1.md) | Ver vídeo |
+| 2 | 04/05/2026 | ⬜ | Ver relatório | Ver vídeo |
+| 3 | 25/05/2026 | ⬜ | Ver relatório | Ver vídeo |
+
 
 ### Legenda: 
 - ⬜ : Não iniciado
@@ -55,32 +54,53 @@ Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-mast
 
 <br>
 
-## 🎯 Sprint 01:
-
-### 📄 Sprint Backlog
-
-### 📉 Burn-Down
+## 🎯 Sprint 01: Prototipação e Desenvolvimento
+<p style="text-align: justify;">
+Nesta sprint, a equipe decidiu focar na prototipação do sistema, iniciando pelo design das telas essenciais para o produto. Em seguida, foi dado início ao desenvolvimento do front-end, enquanto, paralelamente o back-end começou a ser estruturado, juntamente com a elaboração da documentação e a modelagem do banco de dados.
+<br>
+O <b>sprint-backlog</b> pode ser encontrado <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/backlog/sprint-backlog1.md">aqui</a>.
+</p>
 
 <br>
 
 ## 🎯 Sprint 02:
 
-### 📄 Sprint Backlog
-
-### 📉 Burn-Down
 
 <br>
 
 ## 🎯 Sprint 03:
 
-### 📄 Sprint Backlog
-
-### 📉 Burn-Down
-
 <br>
 
 ## 🛠️ Tecnologias
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,nodejs,git,figma)](https://skillicons.dev)
+
+<br>
+
+## 🗃️ Documentação
+<p style="text-align: justify;">
+A documentação do projeto inclui o modelo lógico do banco de dados, os diagramas de caso de uso e de sequência, além dos artefatos do Scrum (Product Backlog e Sprint Backlog) e dos relatórios de cada sprint.<br>
+A documentaçao completa pode ser encontrada <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/">aqui</a>.
+</p>
+
+## 📋 Requisitos 
+
+### [Requisitos Funcionais (RF)](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos-funcionais.md)
+Os Requisitos funcionais são especificações detalhadas que definem o que um sistema deve fazer, descrevendo funcionalidades e comportamentos.
+<br>
+Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos/requisitos-funcionais.md">aqui</a>.
+
+
+### [Requisitos Não Funcionais (RNF)](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos-nao-funcionais.md)
+Os Requisitos não funcionais definem como um sistema opera. Eles estabelecem critérios de qualidade, restrições e atributos como desempenho, segurança, usabilidade e confiabilidade.
+<br>
+Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisitos/requisitos-nao-funcionais.md">aqui</a>.
+
+
+### [Restrição do Projeto (RP)](https://github.com/TechFellasAbp/sprint-master/blob/main/docs/restricoes.md)
+Restrições de um projeto são limitações, fatores externos ou imposições que condicionam o planejamento, execução e conclusão, definindo o que pode ser realista entregue.
+<br>
+Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-master/blob/main/docs/requisistos/  restricoes.md">aqui</a>.
 
 <br>
 
@@ -134,7 +154,7 @@ Eles podem ser encontrados <a href="https://github.com/TechFellasAbp/sprint-mast
   </tr>
 </table>
 
-<table style="width: 600px;">
+<table>
   <tr>
     <td align="center" width="160px">
       <a href="https://github.com/juliasilverio-dev" title="GitHub">
