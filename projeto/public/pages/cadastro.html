@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cadastro</title>
 </head>
 <body>
@@ -16,10 +17,22 @@
             <div class="form-container">
                 <h1>Seja bem vindo!</h1>
                 <h5>Transforme conceitos em <b>resultados reais.</b></h5>
-                <input class="form-input" placeholder="U+02709; Nome" id="name">
-                <input class="form-input" placeholder="Email" id="email">
-                <input class="form-input" placeholder="CPF" id="cpf">
-                <input class="form-input" placeholder="Senha" id="password">
+                <div class="icon-input">
+                    <i class="fa-regular fa-user"></i>
+                    <input class="form-input" placeholder="Nome" id="name">
+                </div>
+                <div class="icon-input">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input class="form-input" placeholder="Email" id="email">
+                </div>
+                <div class="icon-input">
+                    <i class="fa-regular fa-address-card"></i>
+                    <input class="form-input" placeholder="CPF" id="cpf">
+                </div>
+                <div class="icon-input">
+                    <i class="fa-solid fa-key"></i>
+                    <input class="form-input" placeholder="Senha" id="password">
+                </div>
                 <button type="submit" class="button-next">Próximo</button>
                 <div class="form-extras">
                     <p class="style-paragrafo">Já possui login? <a href="#"> Esqueceu a senha?</a></p>

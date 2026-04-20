@@ -26,6 +26,7 @@ html, body{
     justify-content: center;
     align-items: center;
     color: #fff;
+    border-radius: 35px 0 0 35px;
 }
 
 .welcome-banner h1{
@@ -84,7 +85,31 @@ html, body{
     width: 90%;
     border-radius: 25px;
     padding: 10px;
+    padding-left: 45px;
     border:#cccccc solid 2px;
+}
+ 
+.icon-input {
+    width: 90%;
+    padding: 5px;
+    position: relative;
+    display: flex;
+}
+
+.fa-solid {
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    min-width: 40px;
+    color: #919191;
+}
+
+.fa-regular {
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    min-width: 40px;
+    color: #919191;
 }
 
 .button-next {
