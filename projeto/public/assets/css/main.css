@@ -9,7 +9,6 @@ html, body{
     margin: 0;
     font-family: Roboto, sans-serif;
     min-height: 100vh;
-    height: 100%;
 }
 
 .questionnaire{
@@ -22,11 +21,12 @@ html, body{
 }
 
 .questionnaire-container{
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .questionnaire .header{
@@ -53,22 +53,65 @@ html, body{
 }
 
 .questionnaire-title{
+    width: 70%;
     display: flex;
     flex-direction: row;
     align-items: baseline;
     gap: 0.8rem;
 }
 
+.questionnaire .subtitle{
+    width: 70%;
+    margin-bottom: 2rem;
+}
+
+.questionnaire-title h1{
+    font-size: 2.4rem;
+    text-shadow: 0rem 0.2rem 0.1rem #09264a30;
+}
+
 .questionnaire h3{
     margin-top: 0;
+}
+
+.questionnaire-container .number-indicator-container{
+    width: 90%;
+}
+
+.number-indicator-container .number-indicator{
+    background-color: #F9B420;
+    width: 8rem;
+    padding: 0.5rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    text-align: center;
+    font-weight: 500;
 }
 
 .questionnaire-box{
     background-color: #FFFFFF;
     box-shadow: 0rem 0.14rem 0.2rem 0.1rem #60584448;
-    width: 70%;
+    width: 100%;
     padding: 2rem;
     border-radius: 1.5rem;
+}
+
+.questionnaire-box input[type="radio"]{
+    appearance: none;
+    background-color: #BBBBBB;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.questionnaire-box input[type="radio"]:checked{
+    background-color: #2081F9;
+}
+
+.questionnaire-box input[type="radio"]:hover{
+    background-color: #7488a1;
 }
 
 .questionnaire-box .button-holder{
@@ -102,6 +145,12 @@ html, body{
     background-color: #F9B420;
 }
 
+.question-image{
+    border-radius: 0.5rem;
+    height: 20rem;
+    margin-bottom: 1.5rem;
+}
+
 .questionnaire .options-container{
     display: flex;
     flex-direction: column;
@@ -109,10 +158,23 @@ html, body{
     margin-bottom: 1rem;
 }
 
+.options-container div{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
 .questionnaire .footer{
     margin-top: auto;
-    color: #ADA498;
     height: 3rem;
     width: 100%;
     background-color: #09264A;
+}
+
+.questionnaire .copyright{
+    width: 95%;
+    display: flex;
+    margin: 1rem;
+    justify-content: flex-end;
+    color: #ADA498;
 }
