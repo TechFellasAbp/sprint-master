@@ -205,24 +205,6 @@ header {
   font-size: clamp(0.8rem, 4vw, 1.5rem); /* 120% */
 }
 
-@media (max-width: 768px) {
-  .banner-card {
-    height: auto;
-    padding: 1.5rem;
-  }
-
-  .div-cards {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .div-card {
-    width: 45%;
-    height: 250px;
-  }
-}
 /*Fim da estilização da seção do meio (a que tem os ícones)*/
 /*Começo da estilização da seção do Scrum guide*/
 .banner-container-2 {
