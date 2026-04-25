@@ -65,6 +65,14 @@ html, body{
     width: 90%;
 }
 
+.logo-space-log{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: right;
+    width: 75%;
+}
+
+
 .form-container{
     margin-top: 1rem;
     width: 75%;
@@ -134,6 +142,7 @@ html, body{
     margin-top: 20px;
     border: none;
     box-shadow: 0 3px 8px #919191;
+    margin: 1.5rem;
 }
 
 .form-extras {
@@ -141,7 +150,7 @@ html, body{
     font-size: 0.9rem;
     align-items: center;
     width: 90%;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .form-extras.cd{
@@ -187,6 +196,17 @@ html, body{
     position: relative;
     border: 0;
     justify-content: left;
+    align-items: flex-end;
+    bottom: 0;
+    color:#746f6fb0
+}
+.copy-log {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    position: relative;
+    border: 0;
+    justify-content: right;
     align-items: flex-end;
     bottom: 0;
     color:#746f6fb0
