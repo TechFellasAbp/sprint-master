@@ -45,11 +45,18 @@ html, body{
 }
 
 .questionnaire .header a{
-    background-color: white;
     color: #09264A;
     padding: 0.3rem 0.5rem;
     border-radius: 0.6rem;
     cursor: pointer;
+}
+
+.questionnaire .header .back-button{
+    transition: transform 0.3s ease; 
+}
+
+.questionnaire .header .back-button:hover{
+    transform: translateY(-2px);
 }
 
 .questionnaire-title{
@@ -92,6 +99,7 @@ html, body{
     box-shadow: 0rem 0.14rem 0.2rem 0.1rem #60584448;
     width: 100%;
     padding: 2rem;
+    padding-bottom: 1rem;
     border-radius: 1.5rem;
 }
 
@@ -117,31 +125,50 @@ html, body{
 .questionnaire-box .button-holder{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.8rem;
     position:relative;
     float: right;
+    margin-bottom: 1rem;
 }
 
 .questionnaire-box .button{
+    cursor: pointer;
     background-color: #F9B420;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border-radius: 2rem;
+    font: Roboto;
+    text-shadow: 0.1rem 0.1rem 0.1rem #af51263d;
     border: none;
     min-width: 6rem;
-    box-shadow: 0rem 0.1rem 0.4rem 0.2rem #60584428;;
+    box-shadow: 0rem 0.1rem 0.4rem 0.2rem #60584428;
+    transition: transform 0.2s ease;
 }
 
 .questionnaire-box .button:hover{
-    background-color: #d1881b;
+    background-color: #f9a629;
+    transform: translateY(-2px);
 }
 
-.questionnaire-box .question-indicator{
+.questionnaire-box .progress-indicator-container{
     position: relative;
     margin-bottom: 0;
     margin-top: auto;
     bottom: 0;
-    height: 0.2rem;
-    width: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.questionnaire-box .progress-indicator{
+    position: relative;
+    margin-bottom: 0;
+    margin-top: auto;
+    bottom: 0;
+    height: 0.3rem;
+    border-radius: .35rem;
+    width: 10%;
     background-color: #F9B420;
 }
 
@@ -156,6 +183,7 @@ html, body{
     flex-direction: column;
     gap: 0.9rem;
     margin-bottom: 1rem;
+    font: inherit;
 }
 
 .options-container div{
@@ -176,5 +204,6 @@ html, body{
     display: flex;
     margin: 1rem;
     justify-content: flex-end;
+    font-size: 0.9rem;
     color: #ADA498;
 }
