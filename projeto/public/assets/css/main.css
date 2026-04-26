@@ -23,26 +23,68 @@ html, body{
     height: 100%;
 }
 
-.welcome-banner{
+.banner-pai{
     background-color: #09203E;
     flex: 1;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    animation: desliza 0.5s linear;
-    transition: all 1s
+    position: static;
 }
 
-.welcome-banner h1{
+.welcome-bannercd{
+    background-color: #09203E;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px 0 0 50px;
+    color: #fff;
+    animation: desliza 0.8s linear;
+    transition: all 1s;
+    z-index: 10;
+}
+
+.welcome-bannerlg{
+    background-color: #09203E;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 50px 50px 0;
+    color: #fff;
+    animation: volta 0.8s linear;
+    transition: all 1s;
+    z-index: 10;
+}
+
+.welcome-bannercd h1{
     font-size: 4rem;
     text-align: center;
     margin: 0;
 }
 
-.welcome-banner h4{
+.welcome-bannercd h4{
+    font-weight: 400;
+    text-align: center;
+    font: inherit;
+}
+
+.welcome-bannerlg h1{
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+}
+
+.welcome-bannerlg h4{
     font-weight: 400;
     text-align: center;
     font: inherit;
@@ -220,12 +262,36 @@ html, body{
         transform: translateX(0%);
     }
     80%{
-        transform: translateX(-3%);
+        border-radius: 25px 0 0 25px;
+        transform: translateX(-50px);
     }
     90%{
-        transform: translateX(-5%);
+        border-radius: 25px 0 0 25px;
+        transform: translateX(-25px);
     }
     100%{
+        border-radius: 0 0 0 0;
         transform: translateX(0%);
+    }
+}
+
+@keyframes volta {
+    0%{
+        transform: translateX(100%);
+    }
+    60%{
+        transform: translateX(0%);
+    }
+    80%{
+        border-radius: 25px 0 0 25px;
+        transform: translateX(50px);
+    }
+    90%{
+        border-radius: 25px 0 0 25px;
+        transform: translateX(25px);
+    }
+    100%{
+        border-radius: 0 0 0 0;
+        transform: translateX(0px);
     }
 }
