@@ -494,3 +494,64 @@ header {
 
 /*  ==== FIM DA ESTILIZAÇÃO DA HOME ==== */
 
+
+/* ==== RESPONSIVO ====*/
+
+@media (max-width: 575.99px){
+    /* === INÍCIO RESPONSIVO DO QUESTIONÁRIO === */
+    .questionnaire-container{
+        width: 90%;
+    }
+
+    .question-image{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .questionnaire-title{
+        margin-bottom: 0;
+        width: 90%;
+    }
+
+    .questionnaire .subtitle{
+        width: 90%;
+    }
+
+    .questionnaire-title h1, h4{
+        margin-bottom: 0;
+    }
+
+    /* === FIM RESPONSIVO DO QUESTIONÁRIO === */
+}
+
+@media (min-width: 576px){
+    /* === INÍCIO RESPONSIVO DO QUESTIONÁRIO === */
+    .questionnaire-container{
+        width: 85%;
+    }
+
+    .question-image{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .subtitle{
+        width: 90%;
+    }
+    /* === FIM RESPONSIVO DO QUESTIONÁRIO === */
+}
+
+@media (min-width: 768px){
+}
+
+@media (min-width: 992px){
+    /* === INÍCIO RESPONSIVO DO QUESTIONÁRIO === */
+    .questionnaire-container{
+        width: 75%;
+    }
+    /* === FIM RESPONSIVO DO QUESTIONÁRIO === */
+}
+
+@media (min-width: 1280px){
+
+}
