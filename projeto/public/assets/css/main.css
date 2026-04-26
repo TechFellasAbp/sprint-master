@@ -10,7 +10,7 @@ html, body{
     height: 100%;
     font-family: Roboto, sans-serif;
 }
-
+/* ==== ESTILIZAÇÃO DA TELA DE LOGIN/CADASTRO === */
 .login{
     display: flex;
     width: 100%;
@@ -295,3 +295,5 @@ html, body{
         transform: translateX(0px);
     }
 }
+
+/* ==== FIM ESTILIZAÇÃO DA TELA DE LOGIN/CADASTRO ==== */
