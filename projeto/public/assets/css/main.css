@@ -6,11 +6,298 @@
 }
 
 html, body{
-    background-color: #FFF8EF;
     margin: 0;
+    background-color: #FFF8EF;
+    height: 100%;
     font-family: Roboto, sans-serif;
-    min-height: 100vh;
 }
+/* ==== ESTILIZAÇÃO DA TELA DE LOGIN/CADASTRO === */
+.login{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.cadastro{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-pai{
+    background-color: #09203E;
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+.welcome-bannercd{
+    background-color: #09203E;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px 0 0 50px;
+    color: #fff;
+    animation: desliza 0.8s linear;
+    transition: all 1s;
+    z-index: 10;
+}
+
+.welcome-bannerlg{
+    background-color: #09203E;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 50px 50px 0;
+    color: #fff;
+    animation: volta 0.8s linear;
+    transition: all 1s;
+    z-index: 10;
+}
+
+.welcome-bannercd h1{
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+}
+
+.welcome-bannercd h4{
+    font-weight: 400;
+    text-align: center;
+    font: inherit;
+}
+
+.welcome-bannerlg h1{
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+}
+
+.welcome-bannerlg h4{
+    font-weight: 400;
+    text-align: center;
+    font: inherit;
+}
+
+.form-side{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    max-width: 50%;
+    padding: 1rem;
+    align-items: center;
+}
+
+.logo-space{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    width: 90%;
+}
+
+.logo-space-log{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: right;
+    width: 75%;
+}
+
+
+.form-container{
+    margin-top: 1rem;
+    width: 75%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 30px;
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.150) ;
+    align-items: center;
+}
+
+.form-container h1{
+    margin: 0;
+    margin-top: 10px;
+    font-size: 2.5rem;
+    text-shadow: 0 3px 5px #b4b4b4;
+}
+
+.form-container h5{
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.form-input{
+    width: 100%;
+    height: 120%;
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 45px;
+    border:#cccccc solid 2px;
+}
+ 
+.icon-input {
+    width: 90%;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fa-solid {
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    min-width: 40px;
+    color: #919191;
+}
+
+.fa-regular {
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    min-width: 40px;
+    color: #919191;
+}
+
+.button-next {
+    width: 90%;
+    background-color: #F9B420;
+    border-radius: 25px;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: 0 3px 8px #919191;
+    margin: 1.5rem;
+}
+
+.form-extras {
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.form-extras.cd{
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
+    width: 90%; 
+    height: 100%;
+    justify-content: center;
+    align-items: end;
+}
+
+.form-extras a{
+    color: #F9B420;
+    display: flex;
+}
+
+.form-extras input{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.form-extras div{
+    display: inline-flex;
+}
+
+.style-paragrafo {
+    display: flex;
+    gap: 5px;
+}
+
+.style-paragrafo.cd {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+}
+
+.copy {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    position: relative;
+    border: 0;
+    justify-content: left;
+    align-items: flex-end;
+    bottom: 0;
+    color:#746f6fb0
+}
+.copy-log {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    position: relative;
+    border: 0;
+    justify-content: right;
+    align-items: flex-end;
+    bottom: 0;
+    color:#746f6fb0
+}
+
+@keyframes desliza {
+    0%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(0%);
+    }
+    80%{
+        border-radius: 25px 0 0 25px;
+        transform: translateX(-50px);
+    }
+    90%{
+        border-radius: 25px 0 0 25px;
+        transform: translateX(-25px);
+    }
+    100%{
+        border-radius: 0 0 0 0;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes volta {
+    0%{
+        transform: translateX(100%);
+    }
+    60%{
+        transform: translateX(0%);
+    }
+    80%{
+        border-radius: 25px 0 0 25px;
+        transform: translateX(50px);
+    }
+    90%{
+        border-radius: 25px 0 0 25px;
+        transform: translateX(25px);
+    }
+    100%{
+        border-radius: 0 0 0 0;
+        transform: translateX(0px);
+    }
+}
+
+/* ==== FIM ESTILIZAÇÃO DA TELA DE LOGIN/CADASTRO ==== */
 
 /* ==== ESTILIZAÇÃO DA TELA DE QUESTIONÁRIO ==== */
 
@@ -220,6 +507,7 @@ html, body{
 header {
   width: 100%;
 }
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -446,18 +734,18 @@ header {
 }
 
 .texto-e-button-bottom {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: flex-end;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   align-items: flex-end;
    justify-content: center;
    margin-right: clamp( 2rem, 3vw,15rem);
 }
 
 .texto-e-button-bottom p {
-  font-family: Roboto;
-  font-size: 3.2vw;
-  font-weight: 900;
+    font-family: Roboto;
+    font-size: 3.2vw;
+    font-weight: 900;
     text-align: center;
     margin-bottom: 0;
     margin-top: 10rem;
@@ -493,4 +781,3 @@ header {
 }
 
 /*  ==== FIM DA ESTILIZAÇÃO DA HOME ==== */
-
