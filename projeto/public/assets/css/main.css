@@ -324,14 +324,14 @@ html, body{
     .banner-pai{
         display: none;
     }
-    .logo-space{
+    .logo-space,.logo-space-log{
         justify-content: center;
     }
-    .logo-space img{
+    .logo-space,.logo-space-log img{
         width: 80px;
         height: 80px;
     }
-    .copy{
+    .copy,.copy-log{
         justify-content: center;
         font-size: 0.8rem;
     }
