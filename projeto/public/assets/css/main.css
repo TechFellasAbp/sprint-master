@@ -297,6 +297,49 @@ html, body{
     }
 }
 
+@media (max-width:768px){
+    .cadastro{
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .form-side{
+        max-width: 100%;
+        padding: 30px;
+    }
+    .form-container{
+        background-color: transparent;
+        box-shadow: none;
+        height: 80%;
+        width: 100%;
+        padding: 15px;
+    }
+    .form-container h5{
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 0;
+    }
+    .form-container h1 {
+        text-align: center;
+    }
+    .banner-pai{
+        display: none;
+    }
+    .logo-space{
+        justify-content: center;
+    }
+    .logo-space img{
+        width: 80px;
+        height: 80px;
+    }
+    .copy{
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    .icon-input{
+        width: 100%;
+    }
+}
+    
 /* ==== FIM ESTILIZAÇÃO DA TELA DE LOGIN/CADASTRO ==== */
 
 /* ==== ESTILIZAÇÃO DA TELA DE QUESTIONÁRIO ==== */
