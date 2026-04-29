@@ -4,33 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <title>Questionário</title>
+    <title>Sprint Masters | Questionário</title>
 </head>
 <body>
     <main class="questionnaire">
         <div class="header">
-            header
+            <a href="home.html"><img class="back-button" src="../assets/img/botao-voltar.png" width="30px"></a>
+            <img src="../assets/img/scrum-master-logo-circle.png" width="50" height="50">
         </div>
         <div class="questionnaire-title">
             <h1>Scrum Guide</h1>
             <h4>Métodos ágeis</h4>
         </div>
-        <p>Resolva a lista de exercícios a seguir para praticar o conteúdo. Bons estudos!</p>
+        <p class="subtitle">Resolva a lista de questões a seguir para concluir o módulo, e chegar mais perto do certificado!</p>
         <div class="questionnaire-container">
+            <div class="number-indicator-container">
+                <div class="number-indicator">
+                    Questão 1
+                </div>
+            </div>
             <div class="questionnaire-box">
-                <h3>Qual o principal objetivo do framework Scrum em metodologias ágeis?</h3>
-                <p>A) Definir um plano detalhado e fixo para todo o projeto desde o início</p>
-                <p>A) Definir um plano detalhado e fixo para todo o projeto desde o início</p>
-                <p>A) Definir um plano detalhado e fixo para todo o projeto desde o início</p>
-                <p>A) Definir um plano detalhado e fixo para todo o projeto desde o início</p>
-                <p>A) Definir um plano detalhado e fixo para todo o projeto desde o início</p>
-                <button>Voltar</button>
-                <button>Próximo</button>
+                <img class="question-image" src="../assets/img/questionario/questao-6.png">
+                <h3>A chamada “crise do software” foi um dos fatores que impulsionaram o surgimento das metodologias ágeis. Qual problema estava fortemente associado a essa crise?</h3>
+                <div class="options-container">
+                    <div>
+                        <input type="radio" id="a" name="questao1" value="a">
+                        <label for="a">A) Excesso de linguagens de programação</label>
+                    </div> 
+                    <div>
+                        <input type="radio" id="b" name="questao1" value="b">
+                        <label for="b">B) Dificuldade em lidar com mudanças frequentes de requisitos</label>
+                    </div> 
+                    <div>
+                        <input type="radio" id="c" name="questao1" value="c">
+                        <label for="c">C) Uso insuficiente de hardware moderno</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="d" name="questao1" value="d">
+                        <label for="d">D) Falta de padronização de bancos de dados</label>
+                    </div>
+                </div>
+                <div class="button-holder">
+                    <button class="button">Voltar</button>
+                    <button class="button">Próximo</button>
+                </div>
+                <div class="progress-indicator-container">
+                    <div class="progress-indicator"></div>
+                </div>
             </div>
         </div>
-        <div class="footer">
-            (c) Sprint Masters 2026
-        </div>
+        <p class="copyright">&copy; Sprint Masters 2026</p>
+        <div class="footer"></div>
     </main>
 </body>
 </html>

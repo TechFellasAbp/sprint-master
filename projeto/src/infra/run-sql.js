@@ -36,7 +36,9 @@ async function runSqlFiles() {
       await pool.query(sql);
       console.log("ok");
     }
-  } finally {
+ } catch(erro){
+    console.log (erro.message);
+  }finally {
     await pool.end();
   }
 
