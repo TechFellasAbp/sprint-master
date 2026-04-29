@@ -64,7 +64,8 @@ O <b>DoD</b> pode ser encontrado <a href="https://github.com/TechFellasAbp/sprin
 <br>
 
 ## 📈 Cronograma de Evolução do projeto
---
+<img width="1024" height="576" alt="cronograma-evolucao-projeto" src="https://github.com/user-attachments/assets/bad84123-48e9-4255-a445-1abfd6930ecc" />
+
 
 <br>
   
