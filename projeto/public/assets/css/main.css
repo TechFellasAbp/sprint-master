@@ -15,6 +15,7 @@ body {
 header {
   width: 100%;
 }
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -231,30 +232,6 @@ header {
   font-size: clamp(0.8rem, 4vw, 1.5rem); /* 120% */
 }
 
-
-@media (max-width: 768px) {
-  .banner-card {
-    height: auto;
-    padding: 1.5rem;
-  }
-
-  .div-cards {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 1rem;
-    width: 100%;
-    gap: 1rem;
-  }
-
-  .div-card {
-    width: 80%;
-    height: 250px;
-  }
-  .card-texto{
-    font-size: large;
-  }
-}
-
 /*Fim da estilização da seção do meio (a que tem os ícones)*/
 /*Começo da estilização da seção do Scrum guide*/
 .banner-container-2 {
@@ -338,6 +315,27 @@ header {
 }
 
 @media (max-width: 768px) {
+  .banner-card {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .div-cards {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .div-card {
+    width: 80%;
+    height: 250px;
+  }
+  .card-texto{
+    font-size: large;
+  }
+
   .banner-container-2 {
     flex-direction: column;
     height: auto;
