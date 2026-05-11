@@ -25,7 +25,7 @@ router.post("/", async function (req, res) {
   } catch(e){
     console.log(e.message); //<- quando houver um erro interno, esse print ajuda a decifrar qual
     if(e && e.code == "23505"){
-      return res.status(400).json({
+      return res.status(409).json({
         message: "Já existe usuário com os dados informados"
       });
     }
