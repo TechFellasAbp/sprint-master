@@ -21,21 +21,17 @@
         </header>
 
         <div class="profile">
-          <div class="profile__avatar-wrap">
-            <div class="profile__avatar">
-              <img class="profile__avatar" src="../assets/img/user-icon.png" />
+            <div class="profile__avatar-wrap">
+              <img
+                class="profile__avatar"
+                src="../assets/img/user-icon.png"
+                alt="Foto do usuário"
+              />
             </div>
+              <h1 class="profile__name">Nome Usuário</h1>
+              <p class="profile__email">usuario@exemplo.com</p>
           </div>
-          <h1 class="profile__name">Nome Usuário</h1>
-          <p class="profile__email">usuario@exemplo.com</p>
-        </div>
 
-        <form
-          class="sidebar-form"
-          action="#"
-          method="post"
-          onsubmit="return false;"
-        >
           <label class="field">
             <span class="field__label">Nome Completo</span>
             <input
@@ -58,7 +54,6 @@
               data-mobile-value="***.***.***-**"
             />
           </label>
-        </form>
 
         <button type="button" class="btn-logout">Sair da conta</button>
       </aside>
@@ -90,55 +85,39 @@
               Níveis Concluídos
             </h2>
             <ul class="levels">
-              <li class="levels__item">
+            <li class="levels__item">
                 <span class="levels__name">Nível 1</span>
                 <span class="levels__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path fill="currentColor" d="M8 5v14l11-7z" />
-                  </svg>
+                    <img src="../assets/img/play-dashboard.png" width="18" height="18" />
                 </span>
                 <span class="levels__status">Disponível</span>
-                 <img class="levels__icon" src="../assets/img/play-dashboard.png"
-              </li>
+             </li>
               <li class="levels__item">
                 <span class="levels__name">Nível 2</span>
                 <span class="levels__icon" aria-hidden="true">
+                    <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
+                </span>
                 </span>
                 <span class="levels__status">Bloqueado</span>
               </li>
               <li class="levels__item">
                 <span class="levels__name">Nível 3</span>
                 <span class="levels__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path
-                      fill="currentColor"
-                      d="M17 8h-1V6c0-2.76-2.24-5-5-5S6 3.24 6 6v2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"
-                    />
-                  </svg>
+                  <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
                 </span>
                 <span class="levels__status">Bloqueado</span>
               </li>
               <li class="levels__item">
                 <span class="levels__name">Nível 4</span>
                 <span class="levels__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path
-                      fill="currentColor"
-                      d="M17 8h-1V6c0-2.76-2.24-5-5-5S6 3.24 6 6v2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"
-                    />
-                  </svg>
+                  <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
                 </span>
                 <span class="levels__status">Bloqueado</span>
               </li>
               <li class="levels__item">
                 <span class="levels__name">Nível 5</span>
                 <span class="levels__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path
-                      fill="currentColor"
-                      d="M17 8h-1V6c0-2.76-2.24-5-5-5S6 3.24 6 6v2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"
-                    />
-                  </svg>
+                  <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
                 </span>
                 <span class="levels__status">Bloqueado</span>
               </li>
@@ -158,7 +137,7 @@
           </h2>
           <p class="card__subtitle">Nenhum nível iniciado no momento...</p>
           <div class="mascot" aria-hidden="true">
-            <img class="mascot" src="img/mascote-scrum-2.png" />
+            <img class="mascot" src="../assets/img/mascote-scrum-2.png" />
           </div>
           <button type="button" class="btn-primary">Comece agora</button>
         </section>
@@ -171,7 +150,7 @@
             Complete todos os níveis para desbloquear seu diploma.
           </p>
           <div class="diploma-art" aria-hidden="true">
-            <img class="diploma" src="img/diploma-dashboard.png" />
+            <img class="diploma" src="../assets/img/diploma-dashboard.png" />
           </div>
         </section>
       </main>

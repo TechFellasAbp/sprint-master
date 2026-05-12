@@ -1037,11 +1037,8 @@ header {
 
 /* ==== INICIO ESTILIZAÇÂO DASHBOARD ==== */
 
-/* Sprint Master — Dashboard (desktop + mobile) */
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
 :root {
+  --font: 'Roboto', sans-serif;
   --bg-main: #09264a;
   --bg-sidebar: #113B70;
   --cream: #fdf6e9;
@@ -1145,9 +1142,7 @@ body {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
 }
 
 .profile__name {
@@ -1219,6 +1214,10 @@ body {
 
 .btn-logout:hover {
   background: var(--logout-hover);
+}
+
+.btn-logout:active {
+  transform: scale(0.98);
 }
 
 /* ——— Main ——— */
@@ -1295,7 +1294,6 @@ body {
   height: 132px;
   margin: 8px auto 0;
   max-width: 100%;
-  height: auto;
 }
 
 
@@ -1324,7 +1322,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: right;
   width: 18px;
   height: 18px;
   
@@ -1350,8 +1347,7 @@ body {
 
 .mascot {
   max-width: 100%;
-  max-height: min-content;
-  height: 12.5rem;
+  height: 12.5rem;         
   display: flex;
   justify-content: center;
   margin: 4px 0 12px;
@@ -1443,11 +1439,6 @@ body {
     padding-top: 0;
   }
 
-  .logo__sm {
-    font-size: 0.78rem;
-    letter-spacing: 0.1em;
-  }
-
   .profile {
     margin-top: 4px;
   }
@@ -1468,8 +1459,12 @@ body {
   .btn-logout {
     margin-top: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: background 0.15s ease, transform 0.1s ease;
   }
+
+  .btn-logout:active {
+  transform: scale(0.98);
+}
 
   .main {
     padding: 18px 16px 28px;
@@ -1504,15 +1499,6 @@ body {
   .levels__item {
     font-size: 0.88rem;
     gap: 8px;
-  }
-
-  .ring-progress {
-    width: 118px;
-    height: 118px;
-  }
-
-  .ring-progress__label {
-    font-size: 1.2rem;
   }
 
   .mascot {
