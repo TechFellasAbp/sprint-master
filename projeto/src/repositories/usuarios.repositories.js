@@ -1,5 +1,6 @@
 const pool = require("../database/db");
 const { randomBytes, hash } = require("crypto");
+const {hashPassword} = require("../utils/password");
 
 /*
 Para fazer o teste de insert com o POST, cole isso no terminal:
@@ -10,12 +11,13 @@ curl -X POST http://localhost:3000/api \
 
 async function insertUsuario(client, nome, email, cpf, senha){
     const certificadoHash = randomBytes(24).toString("hex");
+    const senhaCodificada = hashPassword(senha);
 
     const result = await client.query(
         `INSERT INTO usuarios (nome, email, cpf, senha, certificado_hash)
             VALUES ($1, $2, $3, $4, $5)
             RETURNING id_usuario, nome, email, cpf, certificado_hash`,
-            [nome, email, cpf, senha, certificadoHash]
+            [nome, email, cpf, senhaCodificada, certificadoHash]
     );
     if(result && result.rowCount == 1){
         return result.rows[0];
