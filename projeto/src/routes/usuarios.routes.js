@@ -1,5 +1,12 @@
 const { Router } = require("express");
-const { createUsuario, updateUsuarioCpf, findUsuarioById } = require("../repositories/usuarios.repositories");
+const { 
+  createUsuario, 
+  updateUsuarioCpf, 
+  updateUsuarioNome, 
+  updateUsuarioEmail, 
+  findUsuarioById ,
+  updateUsuarioSenha
+} = require("../repositories/usuarios.repositories");
 
 const router = Router();
 
@@ -64,7 +71,101 @@ router.patch("/:idUsuario/cpf", async function(req,res){
             message:"Erro interno do servidor."
         });
     }
+});
+
+// atualiza o espaco do nome
+router.patch("/:idUsuario/nome", async function(req,res){
+    const idUsuario = getIdUsuario(req.params);
+
+    if(!idUsuario){
+        return res.status(400).json({message: "id_usuario inválido"});
+    }
+
+    const { nome } = req.body;
+    if(!nome){
+        return res.status(400).json({message: "nome obrigatório"});
+    }
+    try{
+        const result = await updateUsuarioNome(idUsuario, nome);
+        if(!result){
+            return res.status(404).json({message: "Usuário não encontrado"});
+        }
+        const usuario = await findUsuarioById(result.id_usuario);
+        return res.status(200).json(usuario)
+
+    }catch(e){
+        return res.status(404).json({
+            message:"Erro interno do servidor."
+        });
+    }
+});
+
+// atualiza o espaço do email
+router.patch("/:idUsuario/email", async function(req,res){
+    const idUsuario = getIdUsuario(req.params);
+
+    if(!idUsuario){
+        return res.status(400).json({message: "id_usuario inválido"});
+    }
+
+    const { email } = req.body;
+    if(!email){
+        return res.status(400).json({message: "email obrigatório"});
+    }
+    try{
+        const result = await updateUsuarioEmail(idUsuario, email);
+        if(!result){
+            return res.status(404).json({message: "Usuário não encontrado"});
+        }
+        const usuario = await findUsuarioById(result.id_usuario);
+        return res.status(200).json(usuario)
+
+    }catch(e){
+        if(e && e.code == "23505"){
+            return res.status(404).json({
+                message:"Já existe usuário com o nome informado"
+            });
+        }
+        return res.status(404).json({
+            message:"Erro interno do servidor."
+        });
+    }
+});
+
+// atualiza o espaço da senha
+router.patch("/:idUsuario/senha", async function(req,res){
+    const idUsuario = getIdUsuario(req.params);
+
+    if(!idUsuario){
+        return res.status(400).json({message: "id_usuario inválido"});
+    }
+
+    const { senha } = req.body;
+    if(!senha){
+        return res.status(400).json({message: "senha obrigatório"});
+    }
+
+    if (senha.trim().length < 6){
+    return res
+    .status(400)
+    .json({message: "A senha deve ter pelo menos 6 caracteres"})
+  }
+
+    try{
+        const result = await updateUsuarioSenha(idUsuario, senha);
+        if(!result){
+            return res.status(404).json({message: "Usuário não encontrado"});
+        }
+        const usuario = await findUsuarioById(result.id_usuario);
+        return res.status(200).json(usuario)
+
+    }catch(e){
+        return res.status(404).json({
+            message:"Erro interno do servidor."
+        });
+    }
 })
+
 
 function getIdUsuario(params){
     const idUsuario = Number(params.idUsuario);
