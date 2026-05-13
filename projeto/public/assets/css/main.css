@@ -1038,30 +1038,81 @@ header {
     /*Fonte Crimson Text Static*/
     @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
     /*Fonte Meie Script*/
-   @import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');  
+  
 #body-certificado{
+  display: flex;
   width: 100%;
 }
 
-.div.certificado{
-    display:flex;
-    flex: 2;  
-}
-.texto-certificado{
+#main-certificado{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1; /*Sem efeito */ 
   font-family: "Crimson Text Static";
+}
+
+.texto-certificado{
   font-size: 1.3rem;
   text-align: center;
 }
-.div-certificado h1{
+
+#main-certificado h1{
+  display: inline;
   font-size: 2.5rem;
   font-weight: 600;
-  margin: 0;
+  margin: 1rem 0;
+  position: relative;
 }
-.div-certificado h2{
+
+/* #parte-topo-certificado{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 2.5rem;
+    
+} */
+
+.texto-certificado.h1::after{
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 110%;
+  padding: 0 10px;
+  left: -25px;
+  background-color: black;
+}
+
+#main-certificado h2{
   font-size: 2.3rem;
   font-weight: 400;
   margin: 0;
+}
+
+#nomePessoaCertificada{
+  display: inline;
+  position: relative;
+  font-style: italic;
+  text-align: center;
+}
+
+#nomePessoaCertificada.h2{
+  font-size: 4rem;
+}
+
+#nomePessoaCertificada.h2::after{
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 110%;
+  padding: 0 10px;
+  left: -25px;
+  background-color: black;
 }
 
 .logo-scrum-master{
@@ -1070,23 +1121,43 @@ header {
   opacity: 60%;
 }
 .selo-scrum-master{
-  height: 10rem;
-  width: 10rem;
+  height: 13rem;
+  width: 13rem;
+  position: absolute;
+  left: -90%;
+  transform: translateX(90%);
+  top: 0;
 }
 
 #assinatura-scrum-master{
-  font-family: "Meie Script", cursive; 
-  font-size: 10rem;
+  font-family: "Meie Script";
+  font-size: 1.3rem;
 }
-.parte-lateral-certificado{
+
+#data-emissao-certificado{
+  font-size: 1.3rem;
+}
+
+.parte-lateral-maior-certificado{
   display: flex;
-  flex: 1;
   flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  flex: 2;
+}
+.parte-lateral-menor-certificado{
+  display: flex;
+  position: relative;
+  flex: 1;
+  /*flex-direction: column; Sem efeito*/
   height: 100%;
   width: 100%;
   background-image: url(../img/engrenagens-fundo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center/*right*/;
 }
+
 
 
 
