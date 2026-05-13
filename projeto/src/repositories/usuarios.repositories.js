@@ -89,6 +89,43 @@ async function updateUsuarioCpf(idUsuario, cpf){
     return result.rows[0] || null;
 }
 
+async function updateUsuarioNome(idUsuario, nome){
+    const result = await pool.query(
+        `UPDATE usuarios 
+        SET nome = $1
+        WHERE id_usuario = $2
+        RETURNING id_usuario
+        `,
+        [nome,idUsuario],
+    );
+    return result.rows[0] || null;
+}
+
+async function updateUsuarioEmail(idUsuario, email){
+    const result = await pool.query(
+        `UPDATE usuarios 
+        SET email = $1
+        WHERE id_usuario = $2
+        RETURNING id_usuario
+        `,
+        [email,idUsuario],
+    );
+    return result.rows[0] || null;
+}
+
+async function updateUsuarioSenha(idUsuario, senha){
+    const senhaCodificada = hashPassword(senha)
+    const result = await pool.query(
+        `UPDATE usuarios 
+        SET senha = $1
+        WHERE id_usuario = $2
+        RETURNING id_usuario
+        `,
+        [senhaCodificada,idUsuario],
+    );
+    return result.rows[0] || null;
+}
+
 async function findUsuarioById(idUsuario){
     const result = await pool.query(`
         SELECT id_usuario, nome, email, cpf
@@ -103,5 +140,8 @@ async function findUsuarioById(idUsuario){
 module.exports = {
     createUsuario,
     updateUsuarioCpf,
-    findUsuarioById
+    findUsuarioById,
+    updateUsuarioNome,
+    updateUsuarioEmail,
+    updateUsuarioSenha
 };
