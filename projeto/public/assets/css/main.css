@@ -1033,3 +1033,20 @@ header {
 }
 
 /*  ==== FIM DA ESTILIZAÇÃO DA HOME ==== */
+
+  .banner-modulos {
+    background-color: #09264A;
+    color: #ffff;
+    padding: 20px;
+  }
+
+  .aviso {
+    background-color: #1fd307;
+    color: #ffff;
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 35%;
+  }
