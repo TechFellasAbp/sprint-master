@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="icon" href="../assets/img/scrum-master-logo-circle.ico">
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" aria-label="Perfil e dados da conta">
+        <header class="sidebar__brand">
+          <div class="logo">
+            <div class="logo__mark">
+              <img class="logo__gears" src="../assets/img/scrum-master-logo-circle.ico" />
+            </div>
+            <span class="logo__title">Sprint<br />Master</span>
+          </div>
+        </header>
+
+        <div class="profile">
+            <div class="profile__avatar-wrap">
+              <img
+                class="profile__avatar"
+                src="../assets/img/user-icon.png"
+                alt="Foto do usuário"
+              />
+            </div>
+              <h1 class="profile__name">Nome Usuário</h1>
+              <p class="profile__email">usuario@exemplo.com</p>
+          </div>
+
+          <label class="field">
+            <span class="field__label">Nome Completo</span>
+            <input
+              class="field__input"
+              type="text"
+              name="nome"
+              readonly
+              value=""
+            />
+          </label>
+          <label class="field">
+            <span class="field__label">CPF</span>
+            <input
+              class="field__input"
+              type="text"
+              name="cpf"
+              readonly
+              value="***.***.***-**"
+              data-desktop-value="***.***.***-**"
+              data-mobile-value="***.***.***-**"
+            />
+          </label>
+
+        <button type="button" class="btn-logout">Sair da conta</button>
+      </aside>
+
+      <main class="main" id="conteudo-principal">
+        <div class="main__grid">
+          <section class="card card--progress" titulo="progresso-geral-titulo">
+            <h2
+              id="progresso-geral-titulo"
+              class="card__title card__title--align-desktop-left"
+            >
+              Progresso Geral
+            </h2>
+            <div
+              class="ring-progress"
+              role="img"
+              aria-label="Progresso geral em zero por cento"
+            >
+              <img class="progresso" src="../assets/img/progresso-dashboard.png" />
+            </div>
+            <p class="card__footnote">Nenhum nível concluído.</p>
+          </section>
+
+          <section class="card card--levels" aria-labelledby="niveis-titulo">
+            <h2
+              id="niveis-titulo"
+              class="card__title card__title--align-desktop-left"
+            >
+              Níveis Concluídos
+            </h2>
+            <ul class="levels">
+            <li class="levels__item">
+                <span class="levels__name">Nível 1</span>
+                <span class="levels__icon" aria-hidden="true">
+                    <img src="../assets/img/play-dashboard.png" width="18" height="18" />
+                </span>
+                <span class="levels__status">Disponível</span>
+             </li>
+              <li class="levels__item">
+                <span class="levels__name">Nível 2</span>
+                <span class="levels__icon" aria-hidden="true">
+                    <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
+                </span>
+                </span>
+                <span class="levels__status">Bloqueado</span>
+              </li>
+              <li class="levels__item">
+                <span class="levels__name">Nível 3</span>
+                <span class="levels__icon" aria-hidden="true">
+                  <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
+                </span>
+                <span class="levels__status">Bloqueado</span>
+              </li>
+              <li class="levels__item">
+                <span class="levels__name">Nível 4</span>
+                <span class="levels__icon" aria-hidden="true">
+                  <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
+                </span>
+                <span class="levels__status">Bloqueado</span>
+              </li>
+              <li class="levels__item">
+                <span class="levels__name">Nível 5</span>
+                <span class="levels__icon" aria-hidden="true">
+                  <img src="../assets/img/cadeado-sm.png" width="18" height="18" />
+                </span>
+                <span class="levels__status">Bloqueado</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <section
+          class="card card--current"
+          aria-labelledby="progresso-atual-titulo"
+        >
+          <h2
+            id="progresso-atual-titulo"
+            class="card__title card__title--center"
+          >
+            Progresso Atual
+          </h2>
+          <p class="card__subtitle">Nenhum nível iniciado no momento...</p>
+          <div class="mascot" aria-hidden="true">
+            <img class="mascot" src="../assets/img/mascote-scrum-2.png" />
+          </div>
+          <button type="button" class="btn-primary">Comece agora</button>
+        </section>
+
+        <section class="card card--diploma" aria-labelledby="diploma-titulo">
+          <h2 id="diploma-titulo" class="card__title card__title--center">
+            Diploma
+          </h2>
+          <p class="card__subtitle card__subtitle--narrow">
+            Complete todos os níveis para desbloquear seu diploma.
+          </p>
+          <div class="diploma-art" aria-hidden="true">
+            <img class="diploma" src="../assets/img/diploma-dashboard.png" />
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      (function () {
+        var input = document.querySelector('.field__input[name="cpf"]');
+        var mql = window.matchMedia("(max-width: 767px)");
+        function syncCpf() {
+          if (!input) return;
+          input.value = mql.matches
+            ? input.getAttribute("data-mobile-value")
+            : input.getAttribute("data-desktop-value");
+        }
+        syncCpf();
+        mql.addEventListener("change", syncCpf);
+      })();
+    </script>
+  </body>
+</html>
