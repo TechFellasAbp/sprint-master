@@ -1037,24 +1037,127 @@ header {
 /* ==== COMEÇO DA ESTILIZAÇÃO DA TELA DO CERTIFICADO ==== */
 
 #margin-receive {
-  margin-left: 25px;
+  margin-left: 3em;
+}
+
+.aligment-containers{
+  display: flex;
+  width: 100%;
+  gap: 3rem;
 }
 
 .div-escrita-certificado {
-  background-color: #663d00;
-  width: 50%;
+  width: 60%;
   height: 100%;
   margin-top: 50px;
+  font-size: x-large;  
+}
+
+.bar-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.frase-certificado{
+  color: #646464;
+}
+
+.div-bar{
+  display: block;
+  height: 4rem;
+  width: 2px;
+  background-color: #646464;
+  
+}
+
+.div-escrita-certificado h1 {
+  color: #09203E;
+  font-size: 4rem;
+  text-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.div-escrita-certificado h2 {
+  color: #09203E;
+  font-weight: 400;
 }
 
 .div-escrita-certificado div{
   display: flex;
   flex-direction: row;
-  width: 20rem;
 }
 
 .badge-certificado {
-  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-self: center;
+  padding-left: 0.5rem;
+}
+
+.blue-container {
+  background-color: #09264A;
+  height: 22.5rem;
+  width: 33.75rem;
+  border-radius: 1em;
+  display: flex;
+  align-self: center;
+  float: right;
+}
+
+.button-aligment{
+  display: flex;
+  float: right;
+  gap: 10rem;
+  padding-right: 7rem;
+}
+
+.button-baixar {
+  display: flex;
+  padding-top: 5rem;
+  padding-left: 12rem;
+}
+
+.button-baixar-d {
+  background-color: #157eff;
+  border-radius: 2rem;
+  border: none;
+  width: 11rem;
+  height: 3rem;
+  color: #fff;
+  box-shadow: #000;
+  font-size:large;
+  font-family: inherit;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.button-abrir-d {
+  background-color: #f9a629;
+  border-radius: 2rem;
+  border: none;
+  width: 11rem;
+  height: 3rem;
+  color: #fff;
+  box-shadow: #000;
+  font-size:large;
+  font-family: inherit;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.button-imprimir-d {
+background-color: #f9a629;
+  border-radius: 2rem;
+  border: none;
+  width: 11rem;
+  height: 3rem;
+  color: #fff;
+  box-shadow: #000;
+  font-size:large;
+  font-family: inherit;
+  font-weight: 700;
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.2);
 }
 
 /* ==== FIM DA ESTILIZAÇÃO DA TELA DO CERTIFICADO ==== */
