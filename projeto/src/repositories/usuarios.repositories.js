@@ -1,13 +1,6 @@
 const pool = require("../database/db");
 const { randomBytes, hash } = require("crypto");
-const {hashPassword} = require("../utils/password");
-
-/*
-Para fazer o teste de insert com o POST, cole isso no terminal:
-curl -X POST http://localhost:3000/api \
-    -H "Content-Type: application/json" \
-    -d '{"nome": "Ana", "email": "ana@email.com", "cpf": "12345678901", "senha": "123", "grupo": 1}'
-*/
+const { hashPassword, verifyPassword } = require("../utils/password");
 
 async function insertUsuario(client, nome, email, cpf, senha){
     const certificadoHash = randomBytes(24).toString("hex");
@@ -79,69 +72,98 @@ async function createUsuario(nome, email, cpf, senha){
 
 async function updateUsuarioCpf(idUsuario, cpf){
     const result = await pool.query(
-        `UPDATE usuarios 
+        `UPDATE usuarios
         SET cpf = $1
-        WHERE id_usuario = $2
-        RETURNING id_usuario
-        `,
-        [cpf,idUsuario],
+        where id_usuario = $2
+        RETURNING id_usuario`,
+        [cpf,idUsuario]
     );
+
     return result.rows[0] || null;
 }
 
 async function updateUsuarioNome(idUsuario, nome){
     const result = await pool.query(
-        `UPDATE usuarios 
+        `UPDATE usuarios
         SET nome = $1
-        WHERE id_usuario = $2
-        RETURNING id_usuario
-        `,
-        [nome,idUsuario],
+        where id_usuario = $2
+        RETURNING id_usuario`,
+        [nome, idUsuario]
     );
+
     return result.rows[0] || null;
 }
 
 async function updateUsuarioEmail(idUsuario, email){
     const result = await pool.query(
-        `UPDATE usuarios 
+        `UPDATE usuarios
         SET email = $1
-        WHERE id_usuario = $2
-        RETURNING id_usuario
-        `,
-        [email,idUsuario],
+        where id_usuario = $2
+        RETURNING id_usuario`,
+        [email, idUsuario]
     );
+
     return result.rows[0] || null;
 }
 
 async function updateUsuarioSenha(idUsuario, senha){
-    const senhaCodificada = hashPassword(senha)
+    const senhaCodificada = hashPassword(senha);
+    
     const result = await pool.query(
-        `UPDATE usuarios 
+        `UPDATE usuarios
         SET senha = $1
-        WHERE id_usuario = $2
-        RETURNING id_usuario
-        `,
-        [senhaCodificada,idUsuario],
+        where id_usuario = $2
+        RETURNING id_usuario`,
+        [senhaCodificada, idUsuario]
     );
+
     return result.rows[0] || null;
 }
 
 async function findUsuarioById(idUsuario){
-    const result = await pool.query(`
-        SELECT id_usuario, nome, email, cpf
+    const result = await pool.query(
+        `SELECT id_usuario, nome, email, cpf
         FROM usuarios
-        WHERE id_usuario = $1 
-        `,[idUsuario],
+        WHERE id_usuario = $1`,
+        [idUsuario]
     );
 
     return result.rows[0] || null;
+}
+
+async function findUsuarioByCpfAndSenha(cpf, senha){
+    const result = await pool.query(`
+        SELECT id_usuario, nome, email, cpf, senha
+        FROM usuarios
+        WHERE cpf = $1`,
+        [cpf]
+    );
+
+    const usuario = result.rows[0];
+
+    if(!usuario){
+        throw new Error("Usuário inexistente");
+    }
+
+    const senhaValida = verifyPassword(senha, usuario.senha);
+    if(!senhaValida){
+        throw new Error("Senha incorreta");
+    }
+
+    return {
+        id_usuario: usuario.id_usuario,
+        nome: usuario.nome,
+        email: usuario.email,
+        cpf: usuario.cpf
+    }
 }
 
 module.exports = {
     createUsuario,
     updateUsuarioCpf,
-    findUsuarioById,
     updateUsuarioNome,
     updateUsuarioEmail,
-    updateUsuarioSenha
+    updateUsuarioSenha,
+    findUsuarioByCpfAndSenha,
+    findUsuarioById
 };

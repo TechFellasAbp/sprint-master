@@ -178,3 +178,32 @@ function getIdUsuario(params){
 
 
 module.exports = router;
+
+/*
+-- Comandos para testar diferentes sistemas do backend: --
+
+Cadastro:
+curl -X POST http://localhost:3000/api/usuarios \
+    -H "Content-Type: application/json" \
+    -d '{"nome": "Ana", "email": "ana17@email.com", "cpf": "12345678917", "senha": "123456", "grupo": 1}'
+
+Atualizar CPF:
+curl -X PATCH http://localhost:3000/api/usuarios/4/cpf \
+    -H "Content-Type: application/json" \
+    -d '{"cpf": "11223344556"}'
+
+Atualizar nome:
+curl -X PATCH http://localhost:3000/api/usuarios/4/nome \
+    -H "Content-Type: application/json" \
+    -d '{"nome": "maria eduarda"}'
+
+Atualizar email:
+curl -X PATCH http://localhost:3000/api/usuarios/4/email \
+    -H "Content-Type: application/json" \
+    -d '{"email": "fernanda@gmail.com"}'
+
+Atualizar senha:
+curl -X PATCH http://localhost:3000/api/usuarios/4/senha \
+    -H "Content-Type: application/json" \
+    -d '{"senha": "teste1"}'
+*/

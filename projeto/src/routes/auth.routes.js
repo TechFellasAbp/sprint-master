@@ -1,14 +1,10 @@
 const { Router } = require("express");
 const {
   findUsuarioByCpfAndSenha,
-} = require("../../usuarios/usuarios.repositories");
-const { createToken } = require("../../utils/jwt");
+} = require("../repositories/usuarios.repositories");
+const { createToken } = require("../utils/jwt");
 
 const router = Router();
-
-// curl -X POST http://localhost:3000/api/auth/login \
-//   -H "Content-Type: application/json" \
-//   -d '{"cpf":"11122233344","senha":"123456"}'
 
 router.post("/login", async function(req, res) {
   const { cpf, senha } = req.body;
@@ -32,3 +28,11 @@ router.post("/login", async function(req, res) {
 });
 
 module.exports = router;
+
+/*
+Código para testar o login (caso não retorne erro quer dizer que foi efetuado com sucesso):
+
+curl -X POST http://localhost:3000/api/auth/login \
+    -H "Content-Type: application/json" \
+    -d '{"cpf": "11223344556", "senha": "teste1"}'
+*/
