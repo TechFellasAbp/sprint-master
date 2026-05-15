@@ -80,7 +80,7 @@ async function updateUsuarioCpf(idUsuario, cpf){
     );
 
     console.log(result.rows[0])
-    return result.rows[0];
+    return result.rows[0] || null;
 }
 
 async function updateUsuarioNome(idUsuario, nome){
@@ -92,7 +92,7 @@ async function updateUsuarioNome(idUsuario, nome){
         [nome, idUsuario]
     );
 
-    return result.rows[0];
+    return result.rows[0] || null;
 }
 
 async function updateUsuarioEmail(idUsuario, email){
@@ -104,7 +104,7 @@ async function updateUsuarioEmail(idUsuario, email){
         [email, idUsuario]
     );
 
-    return result.rows[0];
+    return result.rows[0] || null;
 }
 
 async function updateUsuarioSenha(idUsuario, senha){
@@ -118,7 +118,7 @@ async function updateUsuarioSenha(idUsuario, senha){
         [senhaCodificada, idUsuario]
     );
 
-    return result.rows[0];
+    return result.rows[0] || null;
 }
 
 async function findUsuarioById(idUsuario){
