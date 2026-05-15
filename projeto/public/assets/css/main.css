@@ -1040,6 +1040,7 @@ header {
     display: flex;
     flex-direction: column; /* Coloca um item embaixo do outro */
     align-items: center;    /* Centraliza todos na horizontal */
+    justify-content: center;
     margin: 0;
     background-color: #FFF8EF; /* Cor de fundo do seu Figma */
 }
@@ -1052,20 +1053,20 @@ header {
     margin: 0;  
 }
 
-div {
+.error-message {
     display: flex;
     flex-direction: column; /* Coloca os textos e o botão um embaixo do outro */
     align-items: center;    /* Centraliza tudo o que está dentro da div horizontalmente */
     width: 100%;            /* Garante que a div use o espaço todo da tela */
 }
 
-.texto1 {
+.text-1 {
     margin-top: 0;
     font-family: 'Roboto', sans-serif;
     color: #09264A
 }
 
-.texto2 {
+.text-2 {
     margin-top: 0;
     padding-top: 10px;
     font-family: 'Roboto', sans-serif;
@@ -1074,7 +1075,7 @@ div {
     color: #09264A
 }
 
-.botao {
+.button-not-found {
     margin: 1%;
     padding: 10px 40px; /* Aumenta a área interna */
     font-size: 18px;    /* Aumenta a letra para acompanhar o botão */
@@ -1087,7 +1088,7 @@ div {
     background-color: #F9B420
 }
 
-.botao:active {
+.button-not-found:active {
   /* Diminui a sombra para parecer que encostou no fundo */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   
