@@ -1508,3 +1508,52 @@ body {
   .card--current .card__subtitle {
     margin-bottom: 20px;
   }
+}
+/*COMEÇO DA ESTILIZAÇÃO DA TELA RESULTADO QUESTIONÁRIO*/
+
+.quiz-result-content{
+  background-color: #fff8ef;
+  width: 100%;
+  margin: 0;
+}
+.quiz-result-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  color: #000;
+  margin: 0;
+}
+.quiz-result-content img{
+  display: flex;
+  filter:  center;
+  width: 15rem;
+  margin: 1.5rem;
+}
+
+.quiz-result-text.medium{
+  font-size: 1.3rem;
+}
+
+.quiz-result-text.super-small{
+  font-size: 0.8;
+}
+
+.button-quiz-result{
+  background-color: #2081f9;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+}
+
+.button-quiz-result a{
+  color: #FFFF;
+  font-weight: bold;
+}
+
+.quiz-result-text:nth-child(6) {
+  color: #1461C2;
+
+}
+/*FIM DA ESTILIZAÇÃO DA TELA RESULTADO QUESTIONÁRIO*/
