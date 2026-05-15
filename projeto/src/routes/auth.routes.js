@@ -1,23 +1,30 @@
 const { Router } = require("express");
-const { findUsuarioByCpfAndSenha } = require("../repositories/usuarios.repositories");
+const {
+  findUsuarioByCpfAndSenha,
+} = require("../repositories/usuarios.repositories");
+const { createToken } = require("../utils/jwt");
 
 const router = Router();
 
-// POST /api/auth/login
-router.post("/login", async function (req, res){
-    const { cpf, senha } = req.body;
-    if(!cpf || !senha){
-        return res.status(400).json({message: "CPF e senha são obrigatórios"});
-    }
+router.post("/login", async function(req, res) {
+  const { cpf, senha } = req.body;
 
-    try{
-        const result = await findUsuarioByCpfAndSenha(cpf, senha);
-        return res.status(200).json(result);
-    } catch (e){
-        return res.status(500).json({
-            message: e.message
-        })
-    }
+  if (!cpf || !senha) {
+    return res.status(400).json({ message: "CPF e senha são obrigatórios" });
+  }
+
+  try {
+    const usuario = await findUsuarioByCpfAndSenha(cpf, senha);
+    const token = createToken({id_usuario:usuario.id_usuario});
+    return res.status(200).json({
+      token,
+      nome: usuario.nome,
+    });
+  } catch (e) {
+    return res.status(500).json({
+      message: e.message,
+    });
+  }
 });
 
 module.exports = router;

@@ -79,7 +79,6 @@ async function updateUsuarioCpf(idUsuario, cpf){
         [cpf,idUsuario]
     );
 
-    console.log(result.rows[0])
     return result.rows[0] || null;
 }
 
