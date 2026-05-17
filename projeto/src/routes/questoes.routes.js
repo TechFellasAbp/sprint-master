@@ -9,6 +9,8 @@ const {
     findModuloAtualByUsuario,
     findOutroGrupoAleatorio,
     updateProximaTentativa,
+    findProximoModuloByUsuario,
+    updateProximoModulo
 } = require("../repositories/questoes.repositories");
 
 const router = Router();
@@ -137,5 +139,63 @@ curl -X POST http://localhost:3000/api/questoes/responder \
 Comando para ir para próxima tentativa:
 curl -X PATCH http://localhost:3000/api/questoes/proxima-tentativa -H "Authorization: Bearer SEU_TOKEN" 
 */
+
+
+/* Proximo modulo /*
+
+/*
+curl -X PATCH http://localhost:3000/api/questoes/proximo-modulo \
+  -H "Authorization: Bearer SEU_TOKEN"
+*/
+router.patch("/proximo-modulo", authMiddleware, async function (req, res) {
+  try {
+    const concluido = await usuarioConcluiuModuloAtual(req.usuario.id_usuario);
+    if (!concluido) {
+      return res.status(409).json({
+        message: "você ainda não concluiu todas as questões do módulo atual",
+      });
+    }
+    console.log("concluido",concluido);
+
+    const moduloAtual = await findModuloAtualByUsuario(req.usuario.id_usuario);
+    if (!moduloAtual) {
+      return res.status(404).json({
+        message: "módulo atual não encontrado",
+      });
+    }
+    console.log("moduloAtual",moduloAtual);
+
+    const modulo = await findProximoModuloByUsuario(req.usuario.id_usuario);
+    if (!modulo) {
+      return res.status(404).json({
+        message: "você concluiu todos os módulos",
+      });
+    }
+    console.log("modulo",modulo);
+
+    const grupo = await findOutroGrupoAleatorio(req.usuario.id_usuario, modulo);
+    if( !grupo ){
+      return res.status(404).json({
+        message: "nenhum grupo disponível para o próximo módulo",
+      });
+    }
+    console.log("grupo",grupo);
+
+    const exame = await updateProximoModulo(moduloAtual.id_exame, modulo, grupo, 1);
+    if (!exame) {
+      return res.status(404).json({
+        message: "exame não encontrado para atualização",
+      });
+    }
+
+    return res.status(200).json(exame);
+  } catch (e) {
+    return res.status(500).json({
+      message: "erro interno do servidor",
+    });
+  }
+});
+
+
 
 module.exports = router;
