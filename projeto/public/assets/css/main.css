@@ -1035,6 +1035,7 @@ header {
 
 /*  ==== FIM DA ESTILIZAÇÃO DA HOME ==== */
 
+
 /*  ==== INICIO DA ESTILIZAÇÃO DA NOT FOUND ==== */
 
 .body-not-found {
@@ -1101,6 +1102,8 @@ header {
 }
 
 /*  ==== FIM DA ESTILIZAÇÃO DA NOT FOUND ==== */
+
+
 /*  === COMEÇO DA ESTILIZAÇÃO DO CERTIFICADO */
 
     /*Fonte Crimson Text Static*/
@@ -1233,8 +1236,6 @@ header {
   overflow: visible;
 }
 
-
-
 #data-emissao-certificado,
 #assinatura-scrum-master{
   position: relative;
@@ -1261,29 +1262,7 @@ header {
   margin: 0;
   justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  === FIM DA ESTILIZAÇÃO DO CERTIFICADO */
-
-
 
 /* ==== INICIO ESTILIZAÇÂO DASHBOARD ==== */
 
@@ -1760,13 +1739,13 @@ header {
   }
 }
 
-
 /*COMEÇO DA ESTILIZAÇÃO DA TELA RESULTADO QUESTIONÁRIO*/
 
 /* .main-quiz-result{
   height: 80%;
   width: 100%;
 } */
+ 
 .quiz-result-content{
   background-color: #fff8ef;
   margin: 0;
@@ -1833,3 +1812,317 @@ header {
 }
 
 /*FIM DA ESTILIZAÇÃO DA TELA RESULTADO QUESTIONÁRIO*/
+
+
+/* ==== ESTILIZAÇÃO DOS MÓDULOS ==== */
+
+.body-modulos {
+  background-color: #FFF8EF;
+}
+
+.banner-modulos {
+    background-image: linear-gradient(to right, #04152b, #09203e, #123669);
+    color: #ffffff;
+    padding: 0px;
+    padding-inline: 6%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; 
+    gap: 20px;
+}
+
+.mascote-scrum {
+    flex-shrink: 0; 
+    width: 210px;   
+    height: auto;
+}
+
+.texto-principal {
+    flex-grow: 1;      
+    font-size: 2.8rem; 
+    text-align: left;
+    min-width: 0;      
+}
+
+.texto-amarelo {
+  color: #F9B420;
+}
+
+.aviso {
+    background-color: #143258;
+    color: #ffffff;
+    width: 30rem;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto; 
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.texto-aviso {
+  font-weight: 100;
+}
+
+.texto-aviso-negrito {
+  font-weight: 700;
+}
+
+.modulos, .modulo5 {
+  box-sizing: border-box;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 2%;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  overflow: visible;
+  position: relative;
+}
+
+.img-modulos{
+    background-color: #e6f0ff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 100px;
+    width: 250px; 
+    flex-shrink: 0; 
+    height: auto;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+.img {
+    flex-shrink: 0; 
+    width: 210px;   
+    height: auto;
+}
+
+.img2 {
+    flex-shrink: 0; 
+    width: 170px;   
+    height: auto;
+}
+
+.info-modulos {
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.titulo-modulos {
+  align-items: end;
+  padding-left: 4%;
+  color: #000;
+  margin-top: auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.numero-modulos {
+  font-size: 30px;
+  margin-right: 20px; 
+}
+
+.texto-modulos {
+  color: #09264A;
+  padding-inline: 2%;
+  font-weight: 450;
+  font-size: 18px;
+  margin-left: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.posicao-btn-modulos {
+  align-self: flex-end;   
+  margin-right: 50px; 
+}
+
+.btn-modulos {
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #000000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #F9B420; 
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-modulos:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px); 
+}
+
+.btn-modulos:active {
+    background-color: #fabc36; 
+    transform: scale(0.994);    
+}
+
+.item-direita {
+  position: absolute;
+  width: 50px;          
+  height: auto;
+  right: -105px;         
+  bottom: -118px;        
+  pointer-events: none; 
+  z-index: 10;
+}
+
+.item-esquerda {
+  position: absolute;
+  width: 50px;          
+  height: auto;
+  left: -105px;          
+  bottom: -118px;        
+  pointer-events: none; 
+  z-index: 10;
+}
+
+.item-mobile {
+  display: none;
+}
+
+.copyright {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #ADA498;
+    padding-bottom: 2rem;
+}
+  
+/* ==== FIM DA ESTILIZAÇÃO DOS MÓDULOS ==== */
+
+
+/* ==== RESPONSIVO DA TELA DE MÓDULOS ==== */
+
+@media screen and (max-width: 768px) {
+  
+  .mascote-scrum {
+    display: none !important; 
+  }
+
+  .banner-modulos {
+    flex-direction: column; 
+    text-align: center;
+    padding-block: 30px; 
+    justify-content: center;
+  }
+
+  .texto-principal {
+    text-align: center;
+    font-size: 2rem; 
+  }
+
+  .aviso {
+    width: 85%;              
+    padding: 4px 10px;       
+    border-radius: 50px;     
+    margin-top: 35px;        
+    margin-bottom: 45px;     
+    border: 1.5px solid #000;
+  }
+
+  .modulos {
+    flex-direction: column; 
+    max-width: 80%;         
+    margin-bottom: 110px;    
+    text-align: center;
+    overflow: visible;      
+  }
+
+  .modulo5 {
+    flex-direction: column; 
+    max-width: 80%;         
+    margin-bottom: 45px;    
+    text-align: center;
+    overflow: visible; 
+  }
+
+  .img-modulos {
+    width: 100%;            
+    box-sizing: border-box;
+    padding: 30px;
+    border-bottom-left-radius: 0px; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .img {
+    width: 140px; 
+  }
+
+  .img2 {
+    width: 100px; 
+  }
+
+  .info-modulos {
+    padding: 25px 15px;
+    align-items: center; 
+  }
+
+  .titulo-modulos {
+    padding-left: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px;
+  }
+
+  .numero-modulos {
+    margin-right: 0; 
+  }
+
+  .texto-modulos {
+    margin-left: 0;
+    padding-inline: 5%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .posicao-btn-modulos {
+    align-self: center; 
+    margin-right: 0;    
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .btn-modulos {
+    width: 90%;
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+
+  /* TRILHAS NO MOBILE */
+  .item-direita, .item-esquerda {
+    display: none !important; 
+  }
+
+  .item-mobile {
+    display: block !important; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    bottom: -95px;               
+    width: 15px;                 
+    height: auto;
+    pointer-events: none;
+  }
+}
+
+/* ==== FINAL DO RESPONSIVO DA TELA DE MÓDULOS ==== */
