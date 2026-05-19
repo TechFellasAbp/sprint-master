@@ -12,7 +12,6 @@ const {
     findProximoModuloByUsuario,
     updateProximoModulo,
     findModulosRespondidosByUsuario
-
 } = require("../repositories/questoes.repositories");
 
 const router = Router();
@@ -65,7 +64,6 @@ router.post("/responder", authMiddleware, async function (req, res) {
     }
 
     const nota = questao.alternativa_correta === respostaNormalizada ? 1 : 0;
-
     const respostaInserida = await inserirRespostaQuestao(id_exame, id_questao, respostaNormalizada,nota);
 
     return res.status(201).json(respostaInserida);
@@ -127,31 +125,6 @@ router.patch("/proxima-tentativa", authMiddleware, async function (req, res) {
   }
 });
 
-
-/*
----- Comandos CURL para questões ----
-
-Ver qual a questão atual/próxima do usuário:
-curl -X GET http://localhost:3000/api/questoes/proxima-questao \
-  -H "Authorization: Bearer SEU_TOKEN"
-
-Responder questão atual do usuário:
-curl -X POST http://localhost:3000/api/questoes/responder \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer SEU_TOKEN" \
-  -d '{"id_exame":"10","id_questao":"21","resposta":"c"}'
-
-Comando para ir para próxima tentativa:
-curl -X PATCH http://localhost:3000/api/questoes/proxima-tentativa -H "Authorization: Bearer SEU_TOKEN" 
-*/
-
-
-/* Proximo modulo /*
-
-/*
-curl -X PATCH http://localhost:3000/api/questoes/proximo-modulo \
-  -H "Authorization: Bearer SEU_TOKEN"
-*/
 router.patch("/proximo-modulo", authMiddleware, async function (req, res) {
   try {
     const concluido = await usuarioConcluiuModuloAtual(req.usuario.id_usuario);
@@ -200,11 +173,6 @@ router.patch("/proximo-modulo", authMiddleware, async function (req, res) {
   }
 });
 
-/*
-curl -X GET http://localhost:3000/api/questoes/modulos-respondidos \
-  -H "Authorization: Bearer SEU_TOKEN"
- */
-
 router.get("/modulos-respondidos", authMiddleware, async function (req, res) {
   try {
     const modulos = await findModulosRespondidosByUsuario(req.usuario.id_usuario);
@@ -212,10 +180,35 @@ router.get("/modulos-respondidos", authMiddleware, async function (req, res) {
     return res.status(200).json(modulos);
   } catch (e) {
     return res.status(500).json({
-      message: "erro interno do servidor",
+      message: "Erro interno do servidor",
     });
   }
 });
 
+/*
+---- Comandos CURL para questões ----
+
+Ver qual a questão atual/próxima do usuário:
+curl -X GET http://localhost:3000/api/questoes/proxima-questao \
+  -H "Authorization: Bearer SEU_TOKEN"
+
+Responder questão atual do usuário:
+curl -X POST http://localhost:3000/api/questoes/responder \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer SEU_TOKEN" \
+  -d '{"id_exame":"10","id_questao":"21","resposta":"c"}'
+
+Comando para ir para próxima tentativa:
+curl -X PATCH http://localhost:3000/api/questoes/proxima-tentativa -H "Authorization: Bearer SEU_TOKEN"
+
+Comando para ir para próximo módulo:
+curl -X PATCH http://localhost:3000/api/questoes/proximo-modulo \
+  -H "Authorization: Bearer SEU_TOKEN"
+
+Comando para ver módulos respondidos:
+curl -X GET http://localhost:3000/api/questoes/modulos-respondidos \
+  -H "Authorization: Bearer SEU_TOKEN"
+
+*/
 
 module.exports = router;
