@@ -1,13 +1,17 @@
 const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const cpfInput = document.getElementById("cpf");
+const passwordInput = document.getElementById("password");
+const cadastrarInput = document.getElementById("button-cadastrar");
 
 async function cadastrarUsuario() {
   // fazer processamento dos valores dos inputs com trim, e passar para as variaveis
   // colocar validação de input aqui (use um if para cada campo)
 
-  var nome = "";
-  var email = "";
-  var cpf = "";
-  var senha = "";
+  var nome = nameInput.value;
+  var email = emailInput.value;
+  var cpf = cpfInput.value;
+  var senha = passwordInput.value;
 
   const endpoint = `api/usuarios`;
 
@@ -24,7 +28,7 @@ async function cadastrarUsuario() {
       );
     }
     alert("Usuário cadastrado com sucesso!");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
   } catch (e) {
     //qualquer erro de conexão a internet ou coisas que não foi o erro do usuário
     alert(e.message ? e.message : "Ocorreu um erro interno.");
@@ -36,3 +40,5 @@ nameInput.addEventListener("keydown", function (event) {
     cadastrarUsuario();
   }
 });
+
+cadastrarInput.addEventListener("click", cadastrarUsuario);
