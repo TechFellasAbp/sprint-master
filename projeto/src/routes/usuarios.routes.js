@@ -186,7 +186,7 @@ module.exports = router;
 Cadastro:
 curl -X POST http://localhost:3000/api/usuarios \
     -H "Content-Type: application/json" \
-    -d '{"nome": "Ana", "email": "ana17@email.com", "cpf": "12345678917", "senha": "123456", "grupo": 1}'
+    -d '{"nome": "Ana", "email": "ana19@email.com", "cpf": "12345678919", "senha": "123456", "grupo": 1}'
 
 Atualizar CPF:
 curl -X PATCH http://localhost:3000/api/usuarios/4/cpf \

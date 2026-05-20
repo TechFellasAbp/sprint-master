@@ -203,7 +203,7 @@ curl -X PATCH http://localhost:3000/api/questoes/proxima-tentativa -H "Authoriza
 
 Comando para ir para próximo módulo:
 curl -X PATCH http://localhost:3000/api/questoes/proximo-modulo \
-  -H "Authorization: Bearer SEU_TOKEN"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjozMywiaWF0IjoxNzc5MjQxNzQ5LCJleHAiOjE3NzkyNDIzNDl9.GyG8Iqtd7vfke-2jzQGffCv5iDv44MxlDHE86h2dh2c"
 
 Comando para ver módulos respondidos:
 curl -X GET http://localhost:3000/api/questoes/modulos-respondidos \
