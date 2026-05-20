@@ -1180,6 +1180,13 @@ background-color: #f9a629;
   background-color: #1c74e0;
 }
 
+.watermark{
+  color: #5a5a5a;
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+
 @media (max-width: 768px){
   .div-escrita-certificado{
     font-size: larger;
@@ -1198,10 +1205,9 @@ background-color: #f9a629;
   }
 
   .button-aligment{
-    padding-bottom: 3rem;
+    padding-bottom: 10rem;
     gap: 4rem;
   }
-}
 
   .paragraph-text{
   width: 100%;
@@ -1228,5 +1234,27 @@ background-color: #f9a629;
     display: flex;
     justify-content: center;
   }
+  
+  .certificate-page{
+      position: relative;
+  }
+
+  .watermark{
+    width: 100%;
+    text-align: center;
+    right: 0;
+  }
+}
+  @media (max-width: 375px){
+    .blue-container{
+    height: 10.25rem;
+    width: 21.5rem;
+  }
+
+  .button-aligment{
+    padding-bottom: 10rem;
+    gap: 2rem;
+  }
+}
 
 /* ==== FIM DA ESTILIZAÇÃO DA TELA DO CERTIFICADO ==== */
