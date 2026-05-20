@@ -2,6 +2,7 @@ const { Router } = require("express");
 const usuarios = require("./usuarios.routes");
 const auth = require("./auth.routes");
 const questoes = require("./questoes.routes");
+const certificados = require("./certificados.routes");
 
 const router = Router();
 
@@ -10,6 +11,7 @@ const router = Router();
 
 router.use("/usuarios", usuarios);
 router.use("/questoes", questoes);
+router.use("/certificados", certificados);
 
 router.use("/auth", auth);
 

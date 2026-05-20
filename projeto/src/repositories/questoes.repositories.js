@@ -85,8 +85,7 @@ async function findRespostaByExameEQuestao(idExame, idQuestao) {
 }
 
 async function inserirRespostaQuestao (id_exame, id_questao, resposta, nota) {
-  const result = await pool.query(
-    `
+  const result = await pool.query(`
       INSERT INTO respostas (id_exame, id_questao, nota, resposta)
       VALUES ($1,$2,$3,$4)
       RETURNING id_resposta, id_exame, id_questao, nota
@@ -97,31 +96,29 @@ async function inserirRespostaQuestao (id_exame, id_questao, resposta, nota) {
 }
 
 async function usuarioConcluiuModuloAtual(idUsuario) {
-  const result = await pool.query(
-    `
+  const result = await pool.query(`
     WITH exame_atual AS ( 
-        SELECT 
+      SELECT 
         id_exame, 
         id_modulo, 
         grupo 
-        FROM exames 
-        WHERE id_usuario = $1 
-        ORDER BY id_exame DESC 
-        LIMIT 1 
-        ) 
-        SELECT NOT EXISTS ( 
-        SELECT 1 
-        FROM exame_atual e 
-        INNER JOIN questoes q 
-        ON q.id_modulo = e.id_modulo 
-        AND q.grupo IS NOT DISTINCT FROM e.grupo 
-        WHERE NOT EXISTS ( 
-        SELECT 1 
-        FROM respostas r 
-        WHERE r.id_exame = e.id_exame 
-        AND r.id_questao = q.id_questao ) 
-        ) AS concluido `,
-    [idUsuario],
+      FROM exames 
+      WHERE id_usuario = $1 
+      ORDER BY id_exame DESC 
+      LIMIT 1 
+    ) 
+      SELECT NOT EXISTS ( 
+      SELECT 1 
+      FROM exame_atual e 
+      INNER JOIN questoes q 
+      ON q.id_modulo = e.id_modulo 
+      AND q.grupo IS NOT DISTINCT FROM e.grupo 
+      WHERE NOT EXISTS ( 
+      SELECT 1 
+      FROM respostas r 
+      WHERE r.id_exame = e.id_exame 
+      AND r.id_questao = q.id_questao ) 
+    ) AS concluido `, [idUsuario],
   );
 
   return result.rows[0]?.concluido || false;
