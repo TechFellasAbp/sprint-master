@@ -956,9 +956,6 @@ header {
   background-color: #157eff;
   border: none;
   width: clamp(14rem, 5vw, 18.75rem);
-}
-
-.button-azul a {
   font-family: Roboto;
   color: #ffff;
   font-weight: 700;
@@ -966,6 +963,9 @@ header {
   text-decoration: none;
 }
 
+.link-button-azul{
+  text-decoration: none;
+}
 @media (max-width: 768px) {
   .banner-card {
     height: auto;
@@ -1038,11 +1038,11 @@ header {
     margin-bottom: 2rem;
   }
 
-  .button-azul {
+  .link-button-azul {
     width: clamp(10rem, 60%, 20rem);
   }
 
-  .button-azul a {
+  .button-azul {
     font-size: clamp(1.2rem, 5vw, 2.3rem);
   }
 }
@@ -1349,6 +1349,7 @@ header {
 
 /* ——— Sidebar (desktop) ——— */
 .sidebar {
+  
   background: var(--bg-sidebar);
   padding: 28px 24px 32px;
   display: flex;
@@ -1462,7 +1463,7 @@ header {
   border-color: var(--blue-accent);
 }
 
-.btn-logout {
+ /* .btn-logout {
   margin-top: auto;
   padding: 13px 16px;
   font-family: var(--font);
@@ -1474,15 +1475,45 @@ header {
   border-radius: var(--radius-input);
   cursor: pointer;
   transition: background 0.15s ease;
+}  */
+
+.btn-logout {
+  
+  margin-top: auto;
+  padding: 13px 16px;
+  font-family: var(--font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--logout-bg);
+  border: none;
+  border-radius: var(--radius-input);
+  cursor: pointer;
+  transition: background 0.15s ease;
+  width: 100%;
+  
 }
 
-.btn-logout:hover {
+.link-logout{
+    margin-top: auto;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--logout-bg);
+    border: none;
+    border-radius: var(--radius-input);
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+  .btn-logout:hover {
   background: var(--logout-hover);
-}
-
-.btn-logout:active {
+}  
+  .btn-logout:active {
   transform: scale(0.98);
-}
+}  
 
 /* ——— Main ——— */
 .main {
@@ -1719,16 +1750,14 @@ header {
   .profile__email {
     font-size: 0.8rem;
   }
-
-  .btn-logout {
+  .link-logout {
     margin-top: 8px;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.1s ease;
   }
-
-  .btn-logout:active {
+  .link-logout:active {
   transform: scale(0.98);
-}
+  }
 
   .main {
     padding: 18px 16px 28px;
@@ -1830,6 +1859,8 @@ header {
   border-radius: 30px;
   margin: 0 0 2.5rem;
   transition: all 0.3s ease;
+  color: #FFFF;
+  font-weight: bold;
 }
 
 .button-quiz-result:hover{
@@ -1837,11 +1868,6 @@ header {
   transform: translateY(-1px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.button-quiz-result a{
-  color: #FFFF;
-  font-weight: bold;
-}
-
 .quiz-result-text.a {
   color: #1461C2;
 }
